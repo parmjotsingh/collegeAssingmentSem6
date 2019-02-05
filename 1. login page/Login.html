@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>login</title>
+    <style media="screen">
+      body{
+        background: rgb(250,250,250);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height:  707px;
+      }
+      .box{
+        height: 707px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .frm{
+        height: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+      }
+      .sbm{
+        color:deepPink;
+        border:solid deepPink 2px;
+        width:20%;
+        padding: 10px;
+        text-align: center;
+        letter-spacing: 1.5px;
+        font-size: 14px;
+        background-color: rgb(250,250,250);
+        cursor: pointer;
+      }
+      .inp{
+        height:30px;
+        width:400px;
+      }
+      p{
+        color:rgba(150,150,150);
+        padding-bottom: 0px;
+        margin-bottom: 2px;
+        text-align: center;
+        font-family: timesNewRoman;
+        font-weight:200;
+      }
+      h1{
+        text-align: center;
+        color:rgba(100,100,100);
+        font-weight: 100;
+        margin-bottom: 2px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="box" >
+      <h1>Log in</h1>
+      <form class="frm" name="frm" method="post" onsubmit="return validateForm()">
+        <span><p>Username</p>
+        <input class="inp" id="inp1" type="text" name="uname" >
+        </span>
+        <span><p>Password</p>
+        <input class="inp" id="inp2" type="password" name="pass" >
+        </span>
+        <input class="sbm" id="inp3" type="submit" name="" value="Login">
+      </form>
+
+      <script type="text/javascript">
+      function validateForm() {
+          var username = document.forms["frm"]["uname"].value;
+          var password = document.forms["frm"]["pass"].value;
+          if (username == "") {
+                alert("Please enter the username.");
+                return false;
+            }
+            if ( password == "") {
+                alert("Please enter the password.");
+                return false;
+            }
+            alert('Login successful');
+            return true;
+        }
+      </script>
+    </div>
+
+  </body>
+</html>
